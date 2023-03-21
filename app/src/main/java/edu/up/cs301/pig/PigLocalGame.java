@@ -3,6 +3,8 @@ package edu.up.cs301.pig;
 import edu.up.cs301.game.GamePlayer;
 import edu.up.cs301.game.LocalGame;
 import edu.up.cs301.game.actionMsg.GameAction;
+import edu.up.cs301.game.actionMsg.MyNameIsAction;
+import edu.up.cs301.game.actionMsg.ReadyAction;
 import edu.up.cs301.game.infoMsg.GameState;
 
 import android.util.Log;
@@ -41,6 +43,8 @@ public class PigLocalGame extends LocalGame {
     @Override
     protected boolean makeMove(GameAction action) {
         //TODO  You will implement this method
+        ReadyAction readyAction = action instanceof ReadyAction ? ((ReadyAction) action) : null;
+//        readyAction instanceof  ? (() readyAction) : null;
         return false;
     }//makeMove
 
