@@ -6,4 +6,12 @@ public class PigGameState {
     int player2score;
     int runningTotal;
     int dieVal;
+
+    public PigGameState() {
+        playerId = 0;
+        player1score = 0;
+        player2score = 0;
+        runningTotal = 0;
+        dieVal = 0;
+    }
 }
