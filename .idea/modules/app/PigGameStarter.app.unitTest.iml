@@ -23,5 +23,5 @@
     <orderEntry type="jdk" jdkName="Android API 27 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
-  <component name="TestModuleProperties" production-module="PigGameStarter2.app.main" />
+  <component name="TestModuleProperties" production-module="PigGameStarter.app.main" />
 </module>
