@@ -19,11 +19,14 @@ import android.util.Log;
  */
 public class PigLocalGame extends LocalGame {
 
+    private PigGameState pgs;
+
     /**
      * This ctor creates a new game state
      */
     public PigLocalGame() {
-        //TODO  You will implement this constructor
+        //instantiating a new piggamestate
+        pgs = new PigGameState();
     }
 
     /**
@@ -31,8 +34,9 @@ public class PigLocalGame extends LocalGame {
      */
     @Override
     protected boolean canMove(int playerIdx) {
-        //TODO  You will implement this method
-        return false;
+        //determine if player id given matches the id of the player of the
+        //if(playerIdx == pgs.getPlayerId())
+        //return false;
     }
 
     /**
