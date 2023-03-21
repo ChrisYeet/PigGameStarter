@@ -1,11 +1,52 @@
 package edu.up.cs301.pig;
 
 public class PigGameState {
-    int playerId;
-    int player1score;
-    int player2score;
-    int runningTotal;
-    int dieVal;
+    private int playerId;
+
+    public int getPlayerId() {
+        return playerId;
+    }
+
+    public void setPlayerId(int playerId) {
+        this.playerId = playerId;
+    }
+
+    public int getPlayer1score() {
+        return player1score;
+    }
+
+    public void setPlayer1score(int player1score) {
+        this.player1score = player1score;
+    }
+
+    public int getPlayer2score() {
+        return player2score;
+    }
+
+    public void setPlayer2score(int player2score) {
+        this.player2score = player2score;
+    }
+
+    public int getRunningTotal() {
+        return runningTotal;
+    }
+
+    public void setRunningTotal(int runningTotal) {
+        this.runningTotal = runningTotal;
+    }
+
+    public int getDieVal() {
+        return dieVal;
+    }
+
+    public void setDieVal(int dieVal) {
+        this.dieVal = dieVal;
+    }
+
+    private int player1score;
+    private int player2score;
+    private int runningTotal;
+    private int dieVal;
 
     public PigGameState() {
         playerId = 0;
