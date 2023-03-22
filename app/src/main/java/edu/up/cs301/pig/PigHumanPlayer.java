@@ -7,6 +7,7 @@ import edu.up.cs301.game.infoMsg.GameInfo;
 
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -64,10 +65,13 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
             flash(Color.RED, 1);
             return;
         }
+
         PigGameState pgs = new PigGameState((PigGameState) info);
         playerScoreTextView.setText(Integer.toString(pgs.getPlayer1score()));
         oppScoreTextView.setText(""+pgs.getPlayer2score());
         turnTotalTextView.setText(""+pgs.getRunningTotal());
+
+        Log.d("SCORE", ""+pgs.getRunningTotal());
 
         switch (pgs.getDieVal()) {
             case 1:
