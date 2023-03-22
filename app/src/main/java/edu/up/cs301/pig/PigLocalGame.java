@@ -57,7 +57,7 @@ public class PigLocalGame extends LocalGame {
         boolean pigHoldAction = action instanceof PigHoldAction;
         boolean pigRollAction = action instanceof PigRollAction;
 
-        if(pigHoldAction && !pigRollAction) {
+        if(pigHoldAction) {
             if(whodis == 1) {
                 pgs.setPlayer1score(pgs.getPlayer1score() + 1);
                 pgs.setRunningTotal(0);
@@ -72,7 +72,7 @@ public class PigLocalGame extends LocalGame {
                 }
             }
             return true;
-        }else if (pigRollAction && !pigHoldAction) {
+        }else if (pigRollAction) {
             int value = (int) (Math.random() * 6) + 1;
             if(value != 1) {
                 pgs.setDieVal(value);
