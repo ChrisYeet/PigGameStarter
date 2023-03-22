@@ -1,6 +1,8 @@
 package edu.up.cs301.pig;
 
-public class PigGameState {
+import edu.up.cs301.game.infoMsg.GameState;
+
+public class PigGameState extends GameState {
     private int playerId;
 
     public int getPlayerId() {
@@ -54,5 +56,13 @@ public class PigGameState {
         player2score = 0;
         runningTotal = 0;
         dieVal = 0;
+    }
+
+    public PigGameState(PigGameState other) {
+        this.playerId = getPlayerId();
+        this.player1score = getPlayer1score();
+        this.player2score = getPlayer2score();
+        this.runningTotal = getRunningTotal();
+        this.dieVal = getDieVal();
     }
 }
