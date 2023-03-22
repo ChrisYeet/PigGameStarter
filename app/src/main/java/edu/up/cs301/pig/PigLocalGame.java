@@ -49,12 +49,18 @@ public class PigLocalGame extends LocalGame {
         boolean pigRollAction = action instanceof PigRollAction;
 
         if(pigHoldAction) {
-            if(whodis == pgs.getPlayerId()) {
+            if(whodis == pgs.getPlayerId() && whodis == 0) {
                 pgs.setPlayer1score(pgs.getRunningTotal() + pgs.getPlayer1score());
                 pgs.setRunningTotal(0);
             } else {
                 pgs.setPlayer2score(pgs.getRunningTotal() + + pgs.getPlayer2score());
                 pgs.setRunningTotal(0);
+            }
+
+            if (pgs.getPlayerId() == 1) {
+                pgs.setPlayerId(0);
+            } else {
+                pgs.setPlayerId(1);
             }
             return true;
         }else if (pigRollAction) {
@@ -64,6 +70,11 @@ public class PigLocalGame extends LocalGame {
                 pgs.setRunningTotal(pgs.getRunningTotal() + value);
             }else {
                 pgs.setRunningTotal(0);
+                if (pgs.getPlayerId() == 1) {
+                    pgs.setPlayerId(0);
+                } else {
+                    pgs.setPlayerId(1);
+                }
             }
             return true;
         }else {

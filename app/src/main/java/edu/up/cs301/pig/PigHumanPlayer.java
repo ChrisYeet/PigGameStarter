@@ -70,9 +70,7 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
         playerScoreTextView.setText(Integer.toString(pgs.getPlayer1score()));
         oppScoreTextView.setText(""+pgs.getPlayer2score());
         turnTotalTextView.setText(""+pgs.getRunningTotal());
-
-        Log.d("SCORE", ""+pgs.getRunningTotal());
-
+        
         switch (pgs.getDieVal()) {
             case 1:
                 dieImageButton.setImageResource(R.drawable.face1);

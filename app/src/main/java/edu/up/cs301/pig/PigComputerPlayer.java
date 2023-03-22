@@ -1,4 +1,6 @@
 package edu.up.cs301.pig;
+import android.util.Log;
+
 import java.util.concurrent.TimeUnit;
 
 import java.util.Random;
@@ -51,7 +53,7 @@ public class PigComputerPlayer extends GameComputerPlayer {
             PigRollAction roll = new PigRollAction(this);
             game.sendAction(roll);
             try {
-                TimeUnit.SECONDS.sleep(2);
+                TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException e) {
                 // handle the exception
                 e.printStackTrace();
