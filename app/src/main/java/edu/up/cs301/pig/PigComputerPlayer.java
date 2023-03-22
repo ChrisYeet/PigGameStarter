@@ -1,4 +1,5 @@
 package edu.up.cs301.pig;
+import java.util.concurrent.TimeUnit;
 
 import java.util.Random;
 
@@ -40,9 +41,21 @@ public class PigComputerPlayer extends GameComputerPlayer {
         if (chance == 0) {
             PigHoldAction hold = new PigHoldAction(this);
             game.sendAction(hold);
+            try {
+                TimeUnit.SECONDS.sleep(2);
+            } catch (InterruptedException e) {
+                // handle the exception
+                e.printStackTrace();
+            }
         } else {
             PigRollAction roll = new PigRollAction(this);
             game.sendAction(roll);
+            try {
+                TimeUnit.SECONDS.sleep(2);
+            } catch (InterruptedException e) {
+                // handle the exception
+                e.printStackTrace();
+            }
         }
     }//receiveInfo
 
