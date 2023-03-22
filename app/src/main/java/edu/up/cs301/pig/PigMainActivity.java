@@ -51,6 +51,7 @@ public class PigMainActivity extends GameMainActivity {
         GameConfig defaultConfig = new GameConfig(playerTypes, 1, 2, "Pig", PORT_NUMBER);
         defaultConfig.addPlayer("Human", 0); // player 1: a human player
         defaultConfig.addPlayer("Computer", 1); // player 2: a computer player
+        defaultConfig.addPlayer("Smart Computer", 2); // player 3: a smart computer player
         defaultConfig.setRemoteData("Remote Human Player", "", 0);
 
         return defaultConfig;
