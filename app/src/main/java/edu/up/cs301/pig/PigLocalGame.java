@@ -102,9 +102,9 @@ public class PigLocalGame extends LocalGame {
         //TODO  You will implement this method
         String winner;
         if(pgs.getPlayer1score() == 50) {
-            return winner = "Player 1 won! Waow";
+            return winner = "Player 1 won! Waowzers";
         }else if(pgs.getPlayer2score() == 50) {
-            return winner = "Player 2 won! Waow";
+            return winner = "Player 2 won! Waowzers";
         }
         return null;
     }
