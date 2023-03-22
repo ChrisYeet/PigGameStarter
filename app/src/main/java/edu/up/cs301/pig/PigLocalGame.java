@@ -9,8 +9,6 @@ import edu.up.cs301.game.infoMsg.GameState;
 
 import android.util.Log;
 
-// dummy comment, to see if commit and push work from srvegdahl account
-
 /**
  * class PigLocalGame controls the play of the game
  *
