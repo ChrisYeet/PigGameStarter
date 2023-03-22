@@ -201,7 +201,7 @@ public class GameConfig {
 		// - name: "Guest"
 		// - IP code: empty string
 		// - player type: the first one in the available-player list
-		setRemoteData("Guest", getIpCode(), 0);
+		setRemoteData("Guest", "", 0);
 
 		// by default, allow the user to modify the configuration
 		this.userModifiable = true;
