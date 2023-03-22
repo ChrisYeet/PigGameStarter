@@ -47,8 +47,8 @@ public class PigLocalGame extends LocalGame {
     @Override
     protected boolean makeMove(GameAction action) {
         //TODO  You will implement this method
-        ReadyAction readyAction = action instanceof ReadyAction ? ((ReadyAction) action) : null;
-//        readyAction instanceof  ? (() readyAction) : null;
+//        ReadyAction readyAction = new ReadyAction(pgs);
+
         return false;
     }//makeMove
 
