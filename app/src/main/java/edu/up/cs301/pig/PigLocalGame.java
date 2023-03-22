@@ -71,7 +71,7 @@ public class PigLocalGame extends LocalGame {
     protected void sendUpdatedStateTo(GamePlayer p) {
         //makes a copy of current game state
         //use send info from game player to the given player object
-        PigGameState pgsCopy = new PigGameState(pgs);
+        PigGameState pgsCopy = pgs;
         p.sendInfo(pgsCopy);
 
     }//sendUpdatedSate
