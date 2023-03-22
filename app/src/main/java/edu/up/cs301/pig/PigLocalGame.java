@@ -49,24 +49,19 @@ public class PigLocalGame extends LocalGame {
         boolean pigRollAction = action instanceof PigRollAction;
 
         if(pigHoldAction) {
-            if(whodis == 1) {
-                pgs.setPlayer1score(pgs.getPlayer1score() + 1);
+            if(whodis == pgs.getPlayerId()) {
+                pgs.setPlayer1score(pgs.getRunningTotal() + pgs.getPlayer1score());
                 pgs.setRunningTotal(0);
-                if(players.length == 2) {
-                    action.setPlayer(players[1]);
-                }
-            }else {
-                pgs.setPlayer2score(pgs.getPlayer2score() + 1);
+            } else {
+                pgs.setPlayer2score(pgs.getRunningTotal() + + pgs.getPlayer2score());
                 pgs.setRunningTotal(0);
-                if(players.length == 2) {
-                    action.setPlayer(players[0]);
-                }
             }
             return true;
         }else if (pigRollAction) {
             int value = (int) (Math.random() * 6) + 1;
             if(value != 1) {
                 pgs.setDieVal(value);
+                pgs.setRunningTotal(pgs.getRunningTotal() + value);
             }else {
                 pgs.setRunningTotal(0);
             }
@@ -81,7 +76,6 @@ public class PigLocalGame extends LocalGame {
      */
     @Override
     protected void sendUpdatedStateTo(GamePlayer p) {
-        //TODO  You will implement this method
         PigGameState piggy = pgs;
         p.sendInfo(piggy);
     }//sendUpdatedSate
