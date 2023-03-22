@@ -75,6 +75,16 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
      * 		the button that was clicked
      */
     public void onClick(View button) {
+        switch (button.getId()) {
+            case R.id.holdButton:
+                PigHoldAction hold = new PigHoldAction(this);
+                game.sendAction(hold);
+                break;
+            case R.id.dieButton:
+                PigRollAction roll = new PigRollAction(this);
+                game.sendAction(roll);
+                break;
+        }
         //TODO  You will implement this method to send appropriate action objects to the game
     }// onClick
 
