@@ -110,7 +110,6 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
                 game.sendAction(roll);
                 break;
         }
-        //TODO  You will implement this method to send appropriate action objects to the game
     }// onClick
 
     /**
