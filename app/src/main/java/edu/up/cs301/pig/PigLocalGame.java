@@ -35,8 +35,12 @@ public class PigLocalGame extends LocalGame {
     @Override
     protected boolean canMove(int playerIdx) {
         //determine if player id given matches the id of the player of the
-        //if(playerIdx == pgs.getPlayerId())
-        return false;
+        if(playerIdx == pgs.getPlayerId()){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     /**
@@ -65,7 +69,11 @@ public class PigLocalGame extends LocalGame {
      */
     @Override
     protected void sendUpdatedStateTo(GamePlayer p) {
-        //TODO  You will implement this method
+        //makes a copy of current game state
+        //use send info from game player to the given player object
+        PigGameState pgsCopy = new PigGameState(pgs);
+        p.sendInfo(pgsCopy);
+
     }//sendUpdatedSate
 
     /**
