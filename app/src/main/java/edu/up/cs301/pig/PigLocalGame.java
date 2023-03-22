@@ -34,12 +34,7 @@ public class PigLocalGame extends LocalGame {
      */
     @Override
     protected boolean canMove(int playerIdx) {
-        if(playerIdx == pgs.getPlayerId()){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return playerIdx == pgs.getPlayerId();
     }
 
     /**
@@ -96,12 +91,16 @@ public class PigLocalGame extends LocalGame {
      */
     @Override
     protected String checkIfGameOver() {
-        //TODO  You will implement this method
+        //check if player's score meets or exceeds 50
+        //if game is over, return the name of player and their score
         String winner;
-        if(pgs.getPlayer1score() == 50) {
-            return winner = "Player 1 won! Waowzers";
-        }else if(pgs.getPlayer2score() == 50) {
-            return winner = "Player 2 won! Waowzers";
+        if(pgs.getPlayer1score() >= 50){
+            winner = "Player 1 Won! Score: " + pgs.getPlayer1score();
+            return winner;
+        }
+        else if(pgs.getPlayer2score() >= 50){
+            winner = "Player 2 Won! Score: " + pgs.getPlayer2score();
+            return winner;
         }
         return null;
     }
