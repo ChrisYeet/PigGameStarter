@@ -35,8 +35,12 @@ public class PigLocalGame extends LocalGame {
     @Override
     protected boolean canMove(int playerIdx) {
         //determine if player id given matches the id of the player of the
-        //if(playerIdx == pgs.getPlayerId())
-        //return false;
+        if(playerIdx == pgs.getPlayerId()){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     /**
