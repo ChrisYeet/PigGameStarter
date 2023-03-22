@@ -34,12 +34,7 @@ public class PigLocalGame extends LocalGame {
      */
     @Override
     protected boolean canMove(int playerIdx) {
-        if(playerIdx == pgs.getPlayerId()){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return playerIdx == pgs.getPlayerId();
     }
 
     /**
