@@ -106,10 +106,12 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
             case R.id.holdButton:
                 PigHoldAction hold = new PigHoldAction(this);
                 game.sendAction(hold);
+                button.invalidate();
                 break;
             case R.id.dieButton:
                 PigRollAction roll = new PigRollAction(this);
                 game.sendAction(roll);
+                button.invalidate();
                 break;
         }
     }// onClick
